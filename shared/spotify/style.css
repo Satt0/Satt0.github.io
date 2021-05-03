@@ -151,7 +151,7 @@ header .nav-container div.nav-responsive .link-container div.seperator {
 
 main {
   background-color: #2941ab;
-  background-image: url("/assets/img/main-bg.svg");
+  background-image: url("./assets/img/main-bg.svg");
   background-size: 183%;
   background-position: center top;
   height: 100vh;
@@ -161,7 +161,7 @@ main {
 @media screen and (max-width: 700px) {
   main {
     background-position: center;
-    background-image: url("/assets/img/bg-mobile.svg");
+    background-image: url("./assets/img/bg-mobile.svg");
   }
 }
 
