@@ -8,7 +8,10 @@ let flag=false;
 function goTo(id){
     const destination=document.getElementById(id)
     if(destination){
-        destination.scrollIntoView({behavior:'smooth',block:'end'})
+        destination.scrollIntoView({behavior:'smooth',block:'start'})
+       if(flag===true){
+        toggleNav()
+       }
     }
 }
 
@@ -39,15 +42,32 @@ window.addEventListener('resize',()=>{
     
     
 })
-// window.addEventListener('scroll',()=>{
-//     const array=Array.from(sections)
-//     for(let i=0;i<array.length;i++){
-//        const element=array[i];
-//        if(element.getBoundingClientRect().y <20){
-//            element.style.opacity='.5'
-//        }
-//        else{
-//         element.style.opacity='1'
-//        }
-//     }
-// })
+let mail=true
+const onSubmit=(e)=>{
+    e.preventDefault();
+    const firstname=document.getElementById('first-name').value;
+    const lastname=document.getElementById('last-name').value;
+    const email=document.getElementById('email-input').value;
+    const subject=document.getElementById('subject-input').value;
+    const message=document.getElementById('message-input').value;
+    if(mail){
+        mail=false;
+        const sending={
+            firstname,lastname,email,subject,message
+        }
+        const header={
+            method: 'POST', // *GET, POST, PUT, DELETE, etc.
+            mode: 'cors', // no-cors, *cors, same-origin
+            cache: 'no-cache', // *default, no-cache, reload, force-cache, only-if-cached
+            credentials: 'same-origin', // include, *same-origin, omit
+            headers: {
+              'Content-Type': 'application/json'
+              // 'Content-Type': 'application/x-www-form-urlencoded',
+            },
+            redirect: 'follow', // manual, *follow, error
+            referrerPolicy: 'no-referrer', // no-referrer, *no-referrer-when-downgrade, origin, origin-when-cross-origin, same-origin, strict-origin, strict-origin-when-cross-origin, unsafe-url
+            body: JSON.stringify({message:sending}) // body data type must match "Content-Type" header
+          }
+        fetch('http://localhost:3000/api/mail',header).then(res=>res.json()).then(console.log)
+    }
+}

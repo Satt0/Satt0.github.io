@@ -5,6 +5,10 @@
   padding: 0;
 }
 
+body {
+  font-family: "Poppins", sans-serif;
+}
+
 header {
   height: 125px;
   background-color: white;
@@ -90,16 +94,6 @@ header .header-content-name li.dash {
 
 header .header-content-name li.career {
   font-size: 1.2em;
-}
-
-header .header-content-name .square {
-  height: 19px;
-  border-radius: 2px;
-  margin-right: 7px;
-  -webkit-transform: translateY(-2px);
-          transform: translateY(-2px);
-  width: 19px;
-  background-color: #5252fd;
 }
 
 header .header-content .btn-toggle {
@@ -245,15 +239,8 @@ header .header-content-shortcuts li:hover {
   }
 }
 
-section {
-  scroll-padding-top: 200px;
-}
-
 section.section-1 {
   font-family: "Poppins", sans-serif;
-  position: -webkit-sticky;
-  position: sticky;
-  top: 0;
   background: -webkit-gradient(linear, right top, left top, color-stop(55%, white), color-stop(45%, #e6dace));
   background: linear-gradient(to left, white 55%, #e6dace 45%);
   width: 100vw;
@@ -405,14 +392,9 @@ section.section-1 .introduction-information .short-link {
 section.section-2 {
   font-family: "Poppins", sans-serif;
   position: relative;
-  min-height: 100vh;
+  min-height: 50vh;
   padding-top: 1rem;
-  background-color: #e6dace;
-}
-
-section.section-2 h1.header {
-  text-align: center;
-  font-size: 2.5rem;
+  background-color: rgba(230, 218, 206, 0.8);
 }
 
 section.section-2 .resume-experience {
@@ -431,6 +413,133 @@ section.section-2 .resume-experience {
 section.section-2 .resume-experience p {
   padding-top: 5px;
   vertical-align: baseline;
+}
+
+section.section-3 {
+  min-height: 50vh;
+  background-color: rgba(230, 218, 206, 0.5);
+}
+
+section.section-3 .project-container {
+  max-width: 1000px;
+  padding: 3rem 5%;
+  margin: 0 auto;
+}
+
+section.section-3 .project-container .project-wrapper {
+  -webkit-box-shadow: rgba(138, 131, 124, 0.23) -11.31px 11.31px 25px 0px;
+          box-shadow: rgba(138, 131, 124, 0.23) -11.31px 11.31px 25px 0px;
+  background-color: white;
+  margin-bottom: 5rem;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+}
+
+@media screen and (max-width: 800px) {
+  section.section-3 .project-container .project-wrapper {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    -ms-grid-rows: max-content 1fr;
+        grid-template-rows: -webkit-max-content 1fr;
+        grid-template-rows: max-content 1fr;
+  }
+}
+
+section.section-3 .project-container .project-wrapper img {
+  width: 100%;
+  height: auto;
+}
+
+section.section-3 .project-container .project-wrapper .project-detail {
+  padding: 1rem 5%;
+  display: inline-block;
+}
+
+section.section-3 .project-container .project-wrapper .project-detail h1 {
+  color: #5e5eff;
+}
+
+section.section-3 .project-container .project-wrapper .project-detail h3 {
+  padding-left: .2rem;
+}
+
+section.section-3 .project-container .project-wrapper .project-detail p {
+  margin-top: 1rem;
+}
+
+footer {
+  padding: 0 14px 2rem 14px;
+  background-color: #e6dace;
+}
+
+footer form {
+  -webkit-box-shadow: rgba(138, 131, 124, 0.23) -11.31px 11.31px 25px 0px;
+          box-shadow: rgba(138, 131, 124, 0.23) -11.31px 11.31px 25px 0px;
+  max-width: 700px;
+  border-radius: 4px;
+  padding: 4rem 3rem;
+  background-color: white;
+  margin: 2rem auto;
+}
+
+footer form label {
+  padding-left: 5px;
+}
+
+footer form label:after {
+  content: '*';
+  color: blue;
+  padding-left: 2px;
+}
+
+footer form .group-input {
+  width: 100%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  grid-gap: 15px;
+}
+
+footer form #message-input {
+  resize: none;
+  font-family: 'Times New Roman', Times, serif;
+  width: 100%;
+  padding: 5px;
+  margin-bottom: 10px;
+  border: none;
+  border-bottom: 2px solid gray;
+}
+
+footer form #message-input, footer form #message-input:focus {
+  outline: none;
+}
+
+footer form button {
+  display: block;
+  margin: 0 auto;
+}
+
+footer form input {
+  width: 100%;
+  margin-bottom: 15px;
+  padding: 5px 15px;
+  border: none;
+  -webkit-transition: all .2s;
+  transition: all .2s;
+  border-bottom: 2px solid rgba(128, 128, 128, 0.616);
+}
+
+footer form input:focus {
+  border: none;
+  outline: none;
+}
+
+footer form input:focus {
+  border-bottom: 2px solid;
+  border-bottom-color: rgba(95, 95, 253, 0.678);
 }
 
 @-webkit-keyframes slideleft {

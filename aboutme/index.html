@@ -4,36 +4,39 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>About me</title>
-    <link rel="stylesheet" href="shared.css">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="shared.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;600&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="style.css" />
+    <meta name="google-site-verification" content="u6FXwpXTuHSOCvLETiMrh9KpJ1ET1azLXa2PuCJf7zs" />
   </head>
   <body>
-    <header>
+    <header id="intro">
       <div class="header-content">
         <div class="header-content-name">
-         
           <li class="name">Hoàng Minh Tân</li>
           <li class="dash">/</li>
           <li class="career">Web developer</li>
         </div>
         <button class="btn-toggle" id="toggle" onclick="toggleNav()">
-        <span></span>
-        <span></span>
-        <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
         </button>
         <div class="backdrop" onclick="toggleNav();" id="backdrop"></div>
         <div class="header-content-shortcuts" id="dropdown">
           <li onclick="goTo('intro')">Intro</li>
-          <li onclick="goTo('resume')">Resume</li>
-          <li>Projects</li>
+
+          <li onclick="goTo('projects')">Projects</li>
           <li>Contact</li>
         </div>
       </div>
     </header>
-    <section class="section-1" id="intro">
-        <!-- intro -->
+    <section class="section-1" >
+      <!-- intro -->
       <div class="introduction">
         <div class="introduction-profile">
           <div class="avatar-container">
@@ -43,9 +46,23 @@
             <h1>Hoàng Minh Tân</h1>
             <h2>Web developer</h2>
             <div class="social">
-              <a href="https://www.facebook.com/hoangminhtan6601/" target="_blank"><img title="My facebook" src="./assets/images/fb.webp" alt=""></a>
-              <a href="https://www.instagram.com/minh_taan/" target="_blank"><img title="My Instagram" src="./assets/images/insta.webp" alt=""></a>
-              <a href="" target="_blank"><img title="My LinkedIn" src="./assets/images/linkedin.webp" alt=""></a>
+              <a
+                href="https://www.facebook.com/hoangminhtan6601/"
+                target="_blank"
+                ><img title="My facebook" src="./assets/images/fb.webp" alt=""
+              /></a>
+              <a href="https://www.instagram.com/minh_taan/" target="_blank"
+                ><img
+                  title="My Instagram"
+                  src="./assets/images/insta.webp"
+                  alt=""
+              /></a>
+              <a href="" target="_blank"
+                ><img
+                  title="My LinkedIn"
+                  src="./assets/images/linkedin.webp"
+                  alt=""
+              /></a>
             </div>
           </div>
         </div>
@@ -53,13 +70,12 @@
           <h1>Hello</h1>
           <h4>Here's Who I am & What I do</h4>
           <div class="short-link">
-
-            <button onclick="goTo('resume')" class="btn">CV</button>
+          <a href="./assets/docs/cv.pdf" title="click to download pdf" target="_blank"><button class="btn">CV</button></a>
             <button onclick="goTo('projects')" class="btn">Projects</button>
           </div>
           <p>
-            I'm a Web developer. Click here to add your own text and edit me. It’s
-            easy. Just click “Edit Text” or double click me to add your own
+            I'm a Web developer. Click here to add your own text and edit me.
+            It’s easy. Just click “Edit Text” or double click me to add your own
             content and make changes to the font.
           </p>
           <p>
@@ -69,24 +85,92 @@
         </div>
       </div>
 
-
       <!-- CV -->
-      
     </section>
-    <section id="resume" class="section-2">
-        <h1 class="header" >Resume</h1>
-        <div class="resume-experience">
-            <p>Developing</p>
-            <a href="./assets/docs/cv.pdf" target="_blank"><button class="btn">Download PDF</button></a>
-        </div>
-        <div class="">
-
-        </div>
-    </section>
+    <!-- <section id="resume" class="section-2">
+      <h1 class="header">
+        <div class="square"></div>
+        Resume
+      </h1>
+      <div class="resume-experience">
+        <p>Developing</p>
+        <a href="./assets/docs/cv.pdf" target="_blank"
+          ><button class="btn">Download PDF</button></a
+        >
+      </div>
+      <div class=""></div>
+    </section> -->
     <section id="projects" class="section-3">
-      <h1>Projects</h1>
+      <h1 class="header">
+        <div class="square"></div>
+        Projects
+      </h1>
+
+      <div class="project-container">
+        <div class="project-wrapper">
+          <div class="project-detail">
+            <h1>
+              <div class="square" style="transform: translateY(0)"></div>
+              Gallery Website.
+            </h1>
+            <h3><em>Next.js.</em></h3>
+            <p>A website demonstating my highschool's gallery!</p>
+            <p>
+              <strong>check it out :</strong>
+              <a href="https://a11galery.tk/" target="_blank"><button class="btn">a11-gallery</button></a>
+            </p>
+          </div>
+          <img src="./assets/images/project1.png" alt="" />
+        </div>
+        <div class="project-wrapper">
+          <div class="project-detail">
+            <h1>
+              <div class="square" style="transform: translateY(0)"></div>
+              Iphone Case Website.
+            </h1>
+            <h3><em>Next.js, Strapi.</em></h3>
+            <p>A website for selling iphone case (demo).</p>
+            <p>
+              <strong>check it out :</strong>
+              <a href="https://i-case-demo.tk/" target="_blank"><button class="btn">i-case-demo</button></a>            </p>
+          </div>
+          <img src="./assets/images/project2.png" alt="" />
+        </div>
+        <div class="project-wrapper">
+          <div class="project-detail">
+            <h1>
+              <div class="square" style="transform: translateY(0)"></div>
+              Shopping website.
+            </h1>
+            <h3><em>Create-react-app, Express.js, MongoDB.</em></h3>
+            <p>A website for every products (demo).</p>
+            <p>
+              <strong>check it out :</strong>
+              <a href="https://webshop-tan.web.app/" target="_blank"><button class="btn">webshop-tan</button></a>            </p>
+          </div>
+          <img src="./assets/images/project3.png" alt="" />
+        </div>
+      </div>
     </section>
-    <footer></footer>
+    <footer id="contact" onsubmit="onSubmit(event)">
+      <h1 class="header"> <div class="square"></div> Contact</h1>
+     <form>
+      <div class="group-input">
+        <div><label for="first-name">First Name</label>
+          <input required type="text" id="first-name" placeholder="enter your first name!"></div>
+       <div> <label for="last-name">Last Name</label>
+        <input required type="text" id="last-name" placeholder="Last Name"></div>
+      </div>
+      <label for="email-input">Email</label>
+      <input required id="email-input" type="email" placeholder="Email"/>
+      <label  for="subject-input">Subject</label>
+      <input required type="text" id="subject-input" placeholder="Subject"/>
+      <label for="message-input">Message</label>
+      <textarea  required rows="7" id="message-input" placeholder="Message" > </textarea>
+      <button class="btn" type="submit">Send</button>
+     </form>
+
+    </footer>
   </body>
   <script src="main.js"></script>
 </html>
