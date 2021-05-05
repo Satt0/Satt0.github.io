@@ -53,6 +53,19 @@ header .header-content-name {
 @media screen and (max-width: 600px) {
   header .header-content-name {
     font-size: 12px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  header .header-content-name .square, header .header-content-name .dash {
+    display: none;
   }
 }
 
@@ -80,6 +93,63 @@ header .header-content-name .square {
   background-color: #5252fd;
 }
 
+header .header-content .btn-toggle {
+  display: none;
+  z-index: 234234234234234;
+  position: absolute;
+  right: 1rem;
+  top: 2.8rem;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: auto;
+  padding: 5px 2px;
+  width: 2rem;
+  border: none;
+  background-color: transparent;
+  -webkit-transition: all .2s;
+  transition: all .2s;
+}
+
+header .header-content .btn-toggle span {
+  margin: 4px;
+  width: 100%;
+  height: 1px;
+  border-bottom: 1px solid black;
+}
+
+@media screen and (max-width: 900px) {
+  header .header-content .btn-toggle {
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+  }
+}
+
+header .header-content .backdrop {
+  display: none;
+}
+
+@media screen and (max-width: 900px) {
+  header .header-content .backdrop {
+    display: inline-block;
+    position: fixed;
+    z-index: 123123074;
+    background-color: rgba(59, 56, 56, 0.733);
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+  }
+}
+
 header .header-content-shortcuts {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -89,17 +159,68 @@ header .header-content-shortcuts {
           align-items: center;
 }
 
-@media screen and (max-width: 900px) {
-  header .header-content-shortcuts {
-    display: none;
-  }
-}
-
 header .header-content-shortcuts li {
   margin: 0 5px;
   font-family: Arial, Helvetica, sans-serif;
   list-style-type: none;
+  font-size: 1.1rem;
   display: inline-block;
+  cursor: pointer;
+  -webkit-transition: all .2s;
+  transition: all .2s;
+}
+
+header .header-content-shortcuts li:hover {
+  color: #4848f3;
+}
+
+@media screen and (max-width: 900px) {
+  header .header-content-shortcuts {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding-top: 5rem;
+    position: fixed;
+    z-index: 123123123;
+    background-color: #e6dace;
+    width: 100vw;
+    max-width: 400px;
+    height: 100vh;
+    top: 0;
+    right: 0;
+  }
+  header .header-content-shortcuts li {
+    margin: 1rem 0;
+    color: white;
+    opacity: 0;
+    -webkit-animation: slideleft .2s linear forwards;
+            animation: slideleft .2s linear forwards;
+  }
+  header .header-content-shortcuts li:nth-child(1) {
+    -webkit-animation-delay: 0ms;
+            animation-delay: 0ms;
+  }
+  header .header-content-shortcuts li:nth-child(2) {
+    -webkit-animation-delay: 100ms;
+            animation-delay: 100ms;
+  }
+  header .header-content-shortcuts li:nth-child(3) {
+    -webkit-animation-delay: 200ms;
+            animation-delay: 200ms;
+  }
+  header .header-content-shortcuts li:nth-child(4) {
+    -webkit-animation-delay: 300ms;
+            animation-delay: 300ms;
+  }
+  header .header-content-shortcuts li:nth-child(5) {
+    -webkit-animation-delay: 400ms;
+            animation-delay: 400ms;
+  }
+  header .header-content-shortcuts li:nth-child(6) {
+    -webkit-animation-delay: 500ms;
+            animation-delay: 500ms;
+  }
 }
 
 section.section-1 {
@@ -219,5 +340,31 @@ section.section-2 .resume-experience {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 5%;
+}
+
+@-webkit-keyframes slideleft {
+  from {
+    -webkit-transform: translateX(50px);
+            transform: translateX(50px);
+    opacity: .6;
+  }
+  to {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideleft {
+  from {
+    -webkit-transform: translateX(50px);
+            transform: translateX(50px);
+    opacity: .6;
+  }
+  to {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    opacity: 1;
+  }
 }
 /*# sourceMappingURL=style.css.map */

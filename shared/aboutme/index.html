@@ -16,9 +16,15 @@
           <li class="dash">/</li>
           <li class="career">Web developer</li>
         </div>
-        <div class="header-content-shortcuts">
-          <li>Home</li>
-          <li>Resume</li>
+        <button class="btn-toggle" id="toggle" onclick="toggleNav()">
+        <span></span>
+        <span></span>
+        <span></span>
+        </button>
+        <div class="backdrop" onclick="toggleNav();" id="backdrop"></div>
+        <div class="header-content-shortcuts" id="dropdown">
+          <li >Intro</li>
+          <li onclick="goTo('resume')">Resume</li>
           <li>Projects</li>
           <li>Contact</li>
         </div>
