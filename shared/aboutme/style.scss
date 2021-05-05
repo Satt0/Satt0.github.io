@@ -1,6 +1,6 @@
 $nav-height-desktop: 125px;
 $theme-color: rgb(230, 218, 206);
-
+$font-1:'Poppins', sans-serif;
 $responsive-1: 900px;
 * {
   box-sizing: border-box;
@@ -12,7 +12,8 @@ header {
   height: $nav-height-desktop;
   background-color: white;
   width: 100vw;
-
+  
+  z-index: 12123123;
   .header-content {
     height: inherit;
     width: inherit;
@@ -45,14 +46,20 @@ header {
       flex-wrap: nowrap;
       li {
         list-style-type: none;
-        font-family: Arial, Helvetica, sans-serif;
-
+        
+        font-family: $font-1;
+        &.name{
+          font-weight: bold ;
+          font-size: 1.5em;
+        }
         &.name,
         &.dash {
-          font-size: 1.5em;
+        
           margin-right: 5px;
         }
-
+        &.dash {
+          font-size: 1.2em;
+        }
         &.career {
           font-size: 1.2em;
         }
@@ -73,7 +80,8 @@ header {
       position: absolute;
       right:1rem;
       top:2.8rem;
-      
+      position: fixed;
+      cursor: pointer;
       flex-direction: column;
       align-items: center;
       justify-content: center;
@@ -98,7 +106,7 @@ header {
     .backdrop{
       display:none;
       @media screen and (max-width:$responsive-1) {
-        display:inline-block;
+        //display:inline-block;
         position: fixed;
         z-index: 123123123  - 49;
         background-color: rgba(59, 56, 56, 0.733);
@@ -112,8 +120,11 @@ header {
       display: flex;
       align-items: center;
       li {
+        font-family: $font-1;
+        text-transform: uppercase;
+        font-weight: lighter;
         margin: 0 5px;
-        font-family: Arial, Helvetica, sans-serif;
+        
         list-style-type: none;
         font-size: 1.1rem;
         display: inline-block;
@@ -124,7 +135,7 @@ header {
         }
       }
       @media screen and(max-width:$responsive-1) {
-        //display: none;
+        display: none;
         flex-direction: column;
         padding-top: 5rem;
         position: fixed;
@@ -132,6 +143,9 @@ header {
         background-color: $theme-color;
         width:100vw;
         max-width: 400px;
+        @media screen and (max-width:500px) {
+          max-width: unset;
+        }
         height:100vh;
         top:0;right:0;
         li{
@@ -150,8 +164,13 @@ header {
     }
   }
 }
-
+section{
+  scroll-padding-top:200px;
+}
 section.section-1 {
+  font-family: $font-1;
+  position: sticky;
+  top:0;
   background: linear-gradient(to left, white 55%, $theme-color 45%);
   @media screen and(max-width:$responsive-1) {
     background: linear-gradient(to top, rgb(230, 218, 206) 75%, white 25%);
@@ -172,8 +191,9 @@ section.section-1 {
       grid-template-columns: 1fr;
       height: 700px;
       grid-template-rows: 45vw 1fr;
+      margin: 100px auto 0 auto;
       &-profile{
-          display: grid;
+         
           grid-template-columns: 1fr 1fr;
           grid-template-rows: 100%;
           
@@ -183,6 +203,7 @@ section.section-1 {
       box-shadow: rgba(138, 131, 124, 0.23) -11.31px 11.31px 17px 0px;
       z-index: 12312;
       background-color: white;
+      display: grid;
       .avatar-container {
         background-color: rgba($theme-color, 0.7);
         padding: 15% 25% 20% 25%;
@@ -200,11 +221,46 @@ section.section-1 {
         }
       }
       .name-and-social-media {
+        
         padding-top: 15px;
-        font-family: Arial, Helvetica, sans-serif;
+        height:100%;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+        
         h1,
         h2 {
           text-align: center;
+          margin-bottom: 4%;
+          white-space: nowrap;
+        }
+        h2{
+          font-weight: lighter;
+          font-size: 1.2em;
+        }
+        h1{
+          font-size: 1.6em;
+          border-bottom: 4px solid rgb(90, 90, 255);
+        }
+        @media screen and (max-width:600px){
+          font-size: 12px;
+        }
+        @media screen and (max-width:350px){
+          font-size: 8px;
+        }
+
+        .social{
+          text-align: center;
+          img{
+            border-radius: 2px;
+            border:2px solid transparent;
+            transition: all .2s;
+            &:hover{
+              border:2px solid $theme-color;
+            }
+          }
+         
         }
       }
     }
@@ -221,11 +277,15 @@ section.section-1 {
 }
 
 section.section-2{
+  font-family: $font-1;
+  position: relative;
     min-height: 100vh;
-    padding-top: 5rem;
-    background-color: $theme-color;
+    padding-top: 1rem;
+   
+    background-color: rgba($theme-color,1);
     h1.header{
         text-align: center;
+        font-size: 2.5rem;
     }
     .resume-experience{
         width: 100%;
@@ -234,6 +294,11 @@ section.section-2{
         max-width: 1200px;
         margin:0 auto;
         padding: 0 5%;
+       
+        p{
+          padding-top: 5px;
+          vertical-align: baseline;
+        }
     }
 }
 

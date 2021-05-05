@@ -9,6 +9,7 @@ header {
   height: 125px;
   background-color: white;
   width: 100vw;
+  z-index: 12123123;
 }
 
 header .header-content {
@@ -71,12 +72,20 @@ header .header-content-name {
 
 header .header-content-name li {
   list-style-type: none;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Poppins", sans-serif;
+}
+
+header .header-content-name li.name {
+  font-weight: bold;
+  font-size: 1.5em;
 }
 
 header .header-content-name li.name, header .header-content-name li.dash {
-  font-size: 1.5em;
   margin-right: 5px;
+}
+
+header .header-content-name li.dash {
+  font-size: 1.2em;
 }
 
 header .header-content-name li.career {
@@ -99,6 +108,8 @@ header .header-content .btn-toggle {
   position: absolute;
   right: 1rem;
   top: 2.8rem;
+  position: fixed;
+  cursor: pointer;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -139,7 +150,6 @@ header .header-content .backdrop {
 
 @media screen and (max-width: 900px) {
   header .header-content .backdrop {
-    display: inline-block;
     position: fixed;
     z-index: 123123074;
     background-color: rgba(59, 56, 56, 0.733);
@@ -160,8 +170,10 @@ header .header-content-shortcuts {
 }
 
 header .header-content-shortcuts li {
+  font-family: "Poppins", sans-serif;
+  text-transform: uppercase;
+  font-weight: lighter;
   margin: 0 5px;
-  font-family: Arial, Helvetica, sans-serif;
   list-style-type: none;
   font-size: 1.1rem;
   display: inline-block;
@@ -176,6 +188,7 @@ header .header-content-shortcuts li:hover {
 
 @media screen and (max-width: 900px) {
   header .header-content-shortcuts {
+    display: none;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -190,6 +203,15 @@ header .header-content-shortcuts li:hover {
     top: 0;
     right: 0;
   }
+}
+
+@media screen and (max-width: 900px) and (max-width: 500px) {
+  header .header-content-shortcuts {
+    max-width: unset;
+  }
+}
+
+@media screen and (max-width: 900px) {
   header .header-content-shortcuts li {
     margin: 1rem 0;
     color: white;
@@ -223,7 +245,15 @@ header .header-content-shortcuts li:hover {
   }
 }
 
+section {
+  scroll-padding-top: 200px;
+}
+
 section.section-1 {
+  font-family: "Poppins", sans-serif;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
   background: -webkit-gradient(linear, right top, left top, color-stop(55%, white), color-stop(45%, #e6dace));
   background: linear-gradient(to left, white 55%, #e6dace 45%);
   width: 100vw;
@@ -258,10 +288,9 @@ section.section-1 .introduction {
     height: 700px;
     -ms-grid-rows: 45vw 1fr;
         grid-template-rows: 45vw 1fr;
+    margin: 100px auto 0 auto;
   }
   section.section-1 .introduction-profile {
-    display: -ms-grid;
-    display: grid;
     -ms-grid-columns: 1fr 1fr;
         grid-template-columns: 1fr 1fr;
     -ms-grid-rows: 100%;
@@ -274,6 +303,8 @@ section.section-1 .introduction-profile {
           box-shadow: rgba(138, 131, 124, 0.23) -11.31px 11.31px 17px 0px;
   z-index: 12312;
   background-color: white;
+  display: -ms-grid;
+  display: grid;
 }
 
 section.section-1 .introduction-profile .avatar-container {
@@ -301,12 +332,64 @@ section.section-1 .introduction-profile .avatar-container img {
 
 section.section-1 .introduction-profile .name-and-social-media {
   padding-top: 15px;
-  font-family: Arial, Helvetica, sans-serif;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 section.section-1 .introduction-profile .name-and-social-media h1,
 section.section-1 .introduction-profile .name-and-social-media h2 {
   text-align: center;
+  margin-bottom: 4%;
+  white-space: nowrap;
+}
+
+section.section-1 .introduction-profile .name-and-social-media h2 {
+  font-weight: lighter;
+  font-size: 1.2em;
+}
+
+section.section-1 .introduction-profile .name-and-social-media h1 {
+  font-size: 1.6em;
+  border-bottom: 4px solid #5a5aff;
+}
+
+@media screen and (max-width: 600px) {
+  section.section-1 .introduction-profile .name-and-social-media {
+    font-size: 12px;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  section.section-1 .introduction-profile .name-and-social-media {
+    font-size: 8px;
+  }
+}
+
+section.section-1 .introduction-profile .name-and-social-media .social {
+  text-align: center;
+}
+
+section.section-1 .introduction-profile .name-and-social-media .social img {
+  border-radius: 2px;
+  border: 2px solid transparent;
+  -webkit-transition: all .2s;
+  transition: all .2s;
+}
+
+section.section-1 .introduction-profile .name-and-social-media .social img:hover {
+  border: 2px solid #e6dace;
 }
 
 section.section-1 .introduction-information {
@@ -320,13 +403,16 @@ section.section-1 .introduction-information .short-link {
 }
 
 section.section-2 {
+  font-family: "Poppins", sans-serif;
+  position: relative;
   min-height: 100vh;
-  padding-top: 5rem;
+  padding-top: 1rem;
   background-color: #e6dace;
 }
 
 section.section-2 h1.header {
   text-align: center;
+  font-size: 2.5rem;
 }
 
 section.section-2 .resume-experience {
@@ -340,6 +426,11 @@ section.section-2 .resume-experience {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 5%;
+}
+
+section.section-2 .resume-experience p {
+  padding-top: 5px;
+  vertical-align: baseline;
 }
 
 @-webkit-keyframes slideleft {

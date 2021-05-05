@@ -5,13 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>About me</title>
     <link rel="stylesheet" href="shared.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <header>
       <div class="header-content">
         <div class="header-content-name">
-          <div class="square"></div>
+         
           <li class="name">Hoàng Minh Tân</li>
           <li class="dash">/</li>
           <li class="career">Web developer</li>
@@ -23,14 +25,14 @@
         </button>
         <div class="backdrop" onclick="toggleNav();" id="backdrop"></div>
         <div class="header-content-shortcuts" id="dropdown">
-          <li >Intro</li>
+          <li onclick="goTo('intro')">Intro</li>
           <li onclick="goTo('resume')">Resume</li>
           <li>Projects</li>
           <li>Contact</li>
         </div>
       </div>
     </header>
-    <section class="section-1">
+    <section class="section-1" id="intro">
         <!-- intro -->
       <div class="introduction">
         <div class="introduction-profile">
@@ -40,7 +42,11 @@
           <div class="name-and-social-media">
             <h1>Hoàng Minh Tân</h1>
             <h2>Web developer</h2>
-            <div></div>
+            <div class="social">
+              <a href="https://www.facebook.com/hoangminhtan6601/" target="_blank"><img title="My facebook" src="./assets/images/fb.webp" alt=""></a>
+              <a href="https://www.instagram.com/minh_taan/" target="_blank"><img title="My Instagram" src="./assets/images/insta.webp" alt=""></a>
+              <a href="" target="_blank"><img title="My LinkedIn" src="./assets/images/linkedin.webp" alt=""></a>
+            </div>
           </div>
         </div>
         <div class="introduction-information">
@@ -49,7 +55,7 @@
           <div class="short-link">
 
             <button onclick="goTo('resume')" class="btn">CV</button>
-            <button class="btn">Projects</button>
+            <button onclick="goTo('projects')" class="btn">Projects</button>
           </div>
           <p>
             I'm a Web developer. Click here to add your own text and edit me. It’s
@@ -67,14 +73,18 @@
       <!-- CV -->
       
     </section>
-    <section class="section-2">
-        <h1 class="header" id="resume">Resume</h1>
+    <section id="resume" class="section-2">
+        <h1 class="header" >Resume</h1>
         <div class="resume-experience">
-            <p>
-                Experience
-            </p>
-            <button class="btn">Download Resume</button>
+            <p>Developing</p>
+            <a href="./assets/docs/cv.pdf" target="_blank"><button class="btn">Download PDF</button></a>
         </div>
+        <div class="">
+
+        </div>
+    </section>
+    <section id="projects" class="section-3">
+      <h1>Projects</h1>
     </section>
     <footer></footer>
   </body>

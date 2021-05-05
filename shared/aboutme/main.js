@@ -2,20 +2,21 @@ const dropdown=document.getElementById('dropdown')
 const toggle = document.getElementById('toggle')
 const backdrop = document.getElementById('backdrop')
 const body=document.getElementsByTagName('body')[0]
-let flag=true;
+const sections=document.getElementsByTagName('section')
+let flag=false;
 
 function goTo(id){
     const destination=document.getElementById(id)
     if(destination){
-        destination.scrollIntoView({behavior:'smooth'})
+        destination.scrollIntoView({behavior:'smooth',block:'end'})
     }
 }
 
 const toggleNav=()=>{
     flag=!flag
     if(flag){
-        backdrop.style.display=""
-        dropdown.style.display=""
+        backdrop.style.display="inline-block"
+        dropdown.style.display="flex"
         body.style.overflow="hidden"
         toggle.style.position="fixed"
     }
@@ -38,3 +39,15 @@ window.addEventListener('resize',()=>{
     
     
 })
+// window.addEventListener('scroll',()=>{
+//     const array=Array.from(sections)
+//     for(let i=0;i<array.length;i++){
+//        const element=array[i];
+//        if(element.getBoundingClientRect().y <20){
+//            element.style.opacity='.5'
+//        }
+//        else{
+//         element.style.opacity='1'
+//        }
+//     }
+// })
