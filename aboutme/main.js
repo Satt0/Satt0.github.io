@@ -51,7 +51,7 @@ const onSubmit=(e)=>{
     const subject=document.getElementById('subject-input').value;
     const message=document.getElementById('message-input').value;
     if(mail){
-        mail=false;
+        //mail=false;
         const sending={
             firstname,lastname,email,subject,message
         }
@@ -68,6 +68,10 @@ const onSubmit=(e)=>{
             referrerPolicy: 'no-referrer', // no-referrer, *no-referrer-when-downgrade, origin, origin-when-cross-origin, same-origin, strict-origin, strict-origin-when-cross-origin, unsafe-url
             body: JSON.stringify({message:sending}) // body data type must match "Content-Type" header
           }
-        fetch('http://localhost:3000/api/mail',header).then(res=>res.json()).then(console.log)
+        fetch('https://ecom-v2.vercel.app/api/mail',header).then(res=>res.json()).then(res=>{
+            if(res.result){
+                window.location.href = "/aboutme/thankyou.html";
+            }
+        })
     }
 }

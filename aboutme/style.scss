@@ -1,7 +1,7 @@
 $nav-height-desktop: 125px;
 $theme-color: rgb(230, 218, 206);
 $font-1:'Poppins', sans-serif;
-$responsive-1: 900px;
+$responsive-1: 1300px;
 * {
   box-sizing: border-box;
   margin: 0;
@@ -116,6 +116,10 @@ header {
     &-shortcuts {
       display: flex;
       align-items: center;
+      position: fixed;
+      right:1rem;
+      top:45vh;
+      flex-direction: column;
       li {
         font-family: $font-1;
         text-transform: uppercase;
@@ -277,7 +281,7 @@ section.section-2{
     min-height: 50vh;
     padding-top: 1rem;
    
-    background-color: rgba($theme-color,.8);
+    background-color: rgba($theme-color,.9);
    
     .resume-experience{
         width: 100%;
@@ -296,7 +300,7 @@ section.section-2{
 
 section.section-3{
   min-height: 50vh;
-  background-color: rgba($theme-color, 0.5);
+  background-color: rgba($theme-color, 0.7);
   .project-container{
     max-width: 1000px;
     padding:3rem 5%;
@@ -334,7 +338,7 @@ section.section-3{
 }
 footer{
   padding:0 14px 2rem 14px;
-  background-color: $theme-color;
+  background-color: rgba($theme-color,.5);
   form{
     box-shadow: rgba(138, 131, 124, 0.23) -11.31px 11.31px 25px 0px;
     max-width: 700px;
