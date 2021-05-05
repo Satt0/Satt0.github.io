@@ -22,12 +22,14 @@ const toggleNav=()=>{
         dropdown.style.display="flex"
         body.style.overflow="hidden"
         toggle.style.position="fixed"
+        toggle.classList="btn-toggle show"
     }
     else{
         backdrop.style.display="none"
         dropdown.style.display="none"
         body.style.overflow=""
         toggle.style.position=""
+        toggle.classList="btn-toggle"
 
 
     }
@@ -38,6 +40,7 @@ window.addEventListener('resize',()=>{
         dropdown.style.display=window.innerWidth>900?"":"none"
         body.style.overflow=""
         toggle.style.position=""
+        toggle.classList="btn-toggle"
         flag=false;
     
     
