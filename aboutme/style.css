@@ -31,7 +31,7 @@ header .header-content {
       grid-template-rows: 100%;
 }
 
-@media screen and (max-width: 1300px) {
+@media screen and (max-width: 900px) {
   header .header-content {
     -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
@@ -130,7 +130,7 @@ header .header-content .btn-toggle span {
   border-bottom: 1px solid black;
 }
 
-@media screen and (max-width: 1300px) {
+@media screen and (max-width: 900px) {
   header .header-content .btn-toggle {
     display: -webkit-inline-box;
     display: -ms-inline-flexbox;
@@ -142,7 +142,7 @@ header .header-content .backdrop {
   display: none;
 }
 
-@media screen and (max-width: 1300px) {
+@media screen and (max-width: 900px) {
   header .header-content .backdrop {
     position: fixed;
     z-index: 123123074;
@@ -187,7 +187,7 @@ header .header-content-shortcuts li:hover {
   color: #4848f3;
 }
 
-@media screen and (max-width: 1300px) {
+@media screen and (max-width: 900px) {
   header .header-content-shortcuts {
     display: none;
     -webkit-box-orient: vertical;
@@ -206,13 +206,13 @@ header .header-content-shortcuts li:hover {
   }
 }
 
-@media screen and (max-width: 1300px) and (max-width: 500px) {
+@media screen and (max-width: 900px) and (max-width: 500px) {
   header .header-content-shortcuts {
     max-width: unset;
   }
 }
 
-@media screen and (max-width: 1300px) {
+@media screen and (max-width: 900px) {
   header .header-content-shortcuts li {
     margin: 1rem 0;
     color: white;
@@ -254,7 +254,7 @@ section.section-1 {
   overflow: hidden;
 }
 
-@media screen and (max-width: 1300px) {
+@media screen and (max-width: 900px) {
   section.section-1 {
     background: -webkit-gradient(linear, left bottom, left top, color-stop(75%, #e6dace), color-stop(25%, white));
     background: linear-gradient(to top, #e6dace 75%, white 25%);
@@ -275,7 +275,7 @@ section.section-1 .introduction {
       grid-template-rows: 100%;
 }
 
-@media screen and (max-width: 1300px) {
+@media screen and (max-width: 900px) {
   section.section-1 .introduction {
     -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
@@ -306,7 +306,7 @@ section.section-1 .introduction-profile .avatar-container {
   padding: 15% 25% 20% 25%;
 }
 
-@media screen and (max-width: 1300px) {
+@media screen and (max-width: 900px) {
   section.section-1 .introduction-profile .avatar-container {
     padding: 0 15%;
     width: 100%;
