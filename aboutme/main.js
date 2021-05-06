@@ -54,7 +54,7 @@ const onSubmit=(e)=>{
     const subject=document.getElementById('subject-input').value;
     const message=document.getElementById('message-input').value;
     if(mail){
-        //mail=false;
+        mail=false;
         const sending={
             firstname,lastname,email,subject,message
         }
