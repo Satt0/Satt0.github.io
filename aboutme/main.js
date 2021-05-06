@@ -2,7 +2,8 @@ const dropdown=document.getElementById('dropdown')
 const toggle = document.getElementById('toggle')
 const backdrop = document.getElementById('backdrop')
 const body=document.getElementsByTagName('body')[0]
-const sections=document.getElementsByTagName('section')
+const sections=document.getElementsByTagName('section');
+const submitButton=document.getElementById('submit-button');
 let flag=false;
 
 function goTo(id){
@@ -55,6 +56,12 @@ const onSubmit=(e)=>{
     const message=document.getElementById('message-input').value;
     if(mail){
         mail=false;
+
+        disableSubmit()
+
+
+
+
         const sending={
             firstname,lastname,email,subject,message
         }
@@ -75,6 +82,24 @@ const onSubmit=(e)=>{
             if(res.result){
                 window.location.href = "/aboutme/thankyou.html";
             }
+            else{
+                window.location.href = "/aboutme/error.html";
+            }
+            mail=true
+            enableSubmit()
         })
     }
+}
+
+const disableSubmit=()=>{
+    submitButton.innerHTML=`
+        <img src="./assets/images/loading.svg" height="30px" alt="">
+        `
+        submitButton.style.pointerEvents="none"
+}
+const enableSubmit=()=>{
+    submitButton.innerHTML=`
+        Resend
+    `
+    submitButton.style.pointerEvents=""
 }
