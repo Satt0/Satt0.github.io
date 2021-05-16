@@ -49,6 +49,21 @@ window.addEventListener('resize',()=>{
 let mail=true
 const onSubmit=(e)=>{
     e.preventDefault();
+    const disableSubmit=()=>{
+    submitButton.innerHTML=`
+        <img src="./assets/images/loading.svg" height="30px" alt="">
+        `
+        
+}
+const enableSubmit=()=>{
+    submitButton.innerHTML=`
+    <button class="btn"  type="submit">Send</button>
+    `
+    
+}
+
+
+
     const firstname=document.getElementById('first-name').value;
     const lastname=document.getElementById('last-name').value;
     const email=document.getElementById('email-input').value;
@@ -91,15 +106,3 @@ const onSubmit=(e)=>{
     }
 }
 
-const disableSubmit=()=>{
-    submitButton.innerHTML=`
-        <img src="./assets/images/loading.svg" height="30px" alt="">
-        `
-        submitButton.style.pointerEvents="none"
-}
-const enableSubmit=()=>{
-    submitButton.innerHTML=`
-        Resend
-    `
-    submitButton.style.pointerEvents=""
-}

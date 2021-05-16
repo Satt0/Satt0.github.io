@@ -133,21 +133,6 @@ header .header-content .btn-toggle span {
   border-bottom: 2px solid rgba(0, 0, 0, 0.68);
 }
 
-header .header-content .btn-toggle.show span:nth-child(1) {
-  -webkit-transform: rotate(45deg);
-          transform: rotate(45deg);
-}
-
-header .header-content .btn-toggle.show span:nth-child(2) {
-  -webkit-transform: translateX(-0.35rem);
-          transform: translateX(-0.35rem);
-}
-
-header .header-content .btn-toggle.show span:nth-child(3) {
-  -webkit-transform: rotate(-45deg);
-          transform: rotate(-45deg);
-}
-
 @media screen and (max-width: 900px) {
   header .header-content .btn-toggle {
     display: -webkit-inline-box;
@@ -581,6 +566,12 @@ footer form {
   padding: 4rem 3rem;
   background-color: white;
   margin: 2rem auto;
+}
+
+@media screen and (max-width: 500px) {
+  footer form {
+    padding: .5rem .5rem;
+  }
 }
 
 footer form label {
