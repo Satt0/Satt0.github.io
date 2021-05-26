@@ -69,7 +69,8 @@ header .header-content-name {
         -ms-flex-pack: center;
             justify-content: center;
   }
-  header .header-content-name .square, header .header-content-name .dash {
+  header .header-content-name .square,
+  header .header-content-name .dash {
     display: none;
   }
 }
@@ -119,14 +120,14 @@ header .header-content .btn-toggle {
   width: 2rem;
   border: none;
   background-color: transparent;
-  -webkit-transition: all .2s;
-  transition: all .2s;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
 }
 
 header .header-content .btn-toggle span {
   margin: 4px;
-  -webkit-transition: all .3s;
-  transition: all .3s;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
   border-radius: 4px;
   width: 100%;
   height: 2px;
@@ -178,8 +179,8 @@ header .header-content-shortcuts li {
   font-size: 1.1rem;
   display: inline-block;
   cursor: pointer;
-  -webkit-transition: all .2s;
-  transition: all .2s;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
 }
 
 header .header-content-shortcuts li:hover {
@@ -216,8 +217,8 @@ header .header-content-shortcuts li:hover {
     margin: 1rem 0;
     color: white;
     opacity: 0;
-    -webkit-animation: slideleft .2s linear forwards;
-            animation: slideleft .2s linear forwards;
+    -webkit-animation: slideleft 0.2s linear forwards;
+            animation: slideleft 0.2s linear forwards;
   }
   header .header-content-shortcuts li:nth-child(1) {
     -webkit-animation-delay: 0ms;
@@ -326,8 +327,8 @@ section.section-1 .introduction-profile .avatar-container .bubble {
   border-radius: 2px;
   -webkit-box-shadow: rgba(138, 131, 124, 0.23) -11.31px 11.31px 25px 0px;
           box-shadow: rgba(138, 131, 124, 0.23) -11.31px 11.31px 25px 0px;
-  -webkit-transition: all .2s;
-  transition: all .2s;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
   position: absolute;
   z-index: 3;
   opacity: 0;
@@ -345,19 +346,19 @@ section.section-1 .introduction-profile .avatar-container .bubble p {
 
 section.section-1 .introduction-profile .avatar-container .heart-emoji {
   opacity: 0;
-  -webkit-transition: all .2s;
-  transition: all .2s;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
 }
 
 section.section-1 .introduction-profile .avatar-container:hover .bubble {
-  -webkit-transition-delay: .3s;
-          transition-delay: .3s;
+  -webkit-transition-delay: 0.3s;
+          transition-delay: 0.3s;
   opacity: 1;
 }
 
 section.section-1 .introduction-profile .avatar-container:hover .heart-emoji {
-  -webkit-transition-delay: .7s;
-          transition-delay: .7s;
+  -webkit-transition-delay: 0.7s;
+          transition-delay: 0.7s;
   opacity: 1;
 }
 
@@ -369,8 +370,8 @@ section.section-1 .introduction-profile .avatar-container:hover img {
 section.section-1 .introduction-profile .avatar-container img {
   z-index: 1;
   border-radius: 100%;
-  -webkit-transition: all .2s;
-  transition: all .2s;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
   -webkit-box-shadow: rgba(138, 131, 124, 0.23) -11.31px 11.31px 25px 0px;
           box-shadow: rgba(138, 131, 124, 0.23) -11.31px 11.31px 25px 0px;
 }
@@ -429,8 +430,8 @@ section.section-1 .introduction-profile .name-and-social-media .social {
 section.section-1 .introduction-profile .name-and-social-media .social img {
   border-radius: 2px;
   border: 2px solid transparent;
-  -webkit-transition: all .2s;
-  transition: all .2s;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
 }
 
 section.section-1 .introduction-profile .name-and-social-media .social img:hover {
@@ -516,8 +517,8 @@ section.section-3 .project-container .project-wrapper img {
 }
 
 section.section-3 .project-container .project-wrapper img {
-  -webkit-transition: all .2s;
-  transition: all .2s;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
 }
 
 section.section-3 .project-container .project-wrapper img:hover {
@@ -545,7 +546,7 @@ section.section-3 .project-container .project-detail h1 {
 }
 
 section.section-3 .project-container .project-detail h3 {
-  padding-left: .2rem;
+  padding-left: 0.2rem;
 }
 
 section.section-3 .project-container .project-detail p {
@@ -570,7 +571,7 @@ footer form {
 
 @media screen and (max-width: 500px) {
   footer form {
-    padding: .5rem .5rem;
+    padding: 0.5rem 0.5rem;
   }
 }
 
@@ -579,7 +580,7 @@ footer form label {
 }
 
 footer form label:after {
-  content: '*';
+  content: "*";
   color: blue;
   padding-left: 2px;
 }
@@ -595,16 +596,20 @@ footer form .group-input {
 
 footer form #message-input {
   resize: none;
-  font-family: 'Times New Roman', Times, serif;
+  font-family: "Poppins", sans-serif;
+  font-weight: lighter;
   width: 100%;
-  padding: 5px;
+  padding: 15px;
   margin-bottom: 10px;
   border: none;
+  -webkit-transition: all .2s;
+  transition: all .2s;
   border-bottom: 2px solid gray;
 }
 
-footer form #message-input, footer form #message-input:focus {
+footer form #message-input:focus {
   outline: none;
+  border-bottom: 2px solid #3434de;
 }
 
 footer form button {
@@ -617,8 +622,8 @@ footer form input {
   margin-bottom: 15px;
   padding: 5px 15px;
   border: none;
-  -webkit-transition: all .2s;
-  transition: all .2s;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
   border-bottom: 2px solid rgba(128, 128, 128, 0.616);
 }
 
@@ -636,7 +641,7 @@ footer form input:focus {
   from {
     -webkit-transform: translateX(50px);
             transform: translateX(50px);
-    opacity: .6;
+    opacity: 0.6;
   }
   to {
     -webkit-transform: translateX(0);
@@ -649,7 +654,7 @@ footer form input:focus {
   from {
     -webkit-transform: translateX(50px);
             transform: translateX(50px);
-    opacity: .6;
+    opacity: 0.6;
   }
   to {
     -webkit-transform: translateX(0);
