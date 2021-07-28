@@ -12,7 +12,7 @@ body {
 header {
   height: 125px;
   background-color: white;
-  width: 100vw;
+  width: 100%;
   z-index: 12123123;
 }
 
@@ -151,7 +151,7 @@ header .header-content .backdrop {
     position: fixed;
     z-index: 123123074;
     background-color: rgba(59, 56, 56, 0.733);
-    width: 100vw;
+    width: 100%;
     height: 100vh;
     top: 0;
     left: 0;
@@ -198,7 +198,7 @@ header .header-content-shortcuts li:hover {
     position: fixed;
     z-index: 123123123;
     background-color: #e6dace;
-    width: 100vw;
+    width: 100%;
     max-width: 400px;
     height: 100vh;
     top: 0;
@@ -250,7 +250,7 @@ section.section-1 {
   font-family: "Poppins", sans-serif;
   background: -webkit-gradient(linear, right top, left top, color-stop(55%, white), color-stop(45%, #e6dace));
   background: linear-gradient(to left, white 55%, #e6dace 45%);
-  width: 100vw;
+  width: 100%;
   overflow: hidden;
 }
 
@@ -511,29 +511,44 @@ section.section-3 .project-container .project-wrapper {
   }
 }
 
-section.section-3 .project-container .project-wrapper img {
+section.section-3 .project-container .project-wrapper video, section.section-3 .project-container .project-wrapper img {
   width: 100%;
   height: auto;
 }
 
-section.section-3 .project-container .project-wrapper img {
+section.section-3 .project-container .project-wrapper video {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+section.section-3 .project-container .project-wrapper video, section.section-3 .project-container .project-wrapper img {
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
 }
 
-section.section-3 .project-container .project-wrapper img:hover {
-  -webkit-transform: scale(1.3);
-          transform: scale(1.3);
+section.section-3 .project-container .project-wrapper video:hover, section.section-3 .project-container .project-wrapper img:hover {
+  -webkit-transform: scale(1.6);
+          transform: scale(1.6);
   -webkit-box-shadow: rgba(138, 131, 124, 0.23) -11.31px 11.31px 25px 0px;
           box-shadow: rgba(138, 131, 124, 0.23) -11.31px 11.31px 25px 0px;
   cursor: none;
 }
 
 @media screen and (hover: none) {
-  section.section-3 .project-container .project-wrapper img:hover {
+  section.section-3 .project-container .project-wrapper video:hover, section.section-3 .project-container .project-wrapper img:hover {
     -webkit-transform: scale(1);
             transform: scale(1);
   }
+}
+
+section.section-3 .project-container .project-wrapper .hover-video {
+  position: relative;
+}
+
+section.section-3 .project-container .project-wrapper .hover-video:hover video {
+  display: block;
 }
 
 section.section-3 .project-container .project-detail {

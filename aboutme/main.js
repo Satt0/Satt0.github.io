@@ -115,3 +115,7 @@ var onSubmit = function onSubmit(a) {
       });
   }
 };
+
+const onHover=(e)=>{
+ e.currentTime=0
+}
