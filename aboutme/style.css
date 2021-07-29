@@ -13,6 +13,7 @@ header {
   height: 125px;
   background-color: white;
   width: 100%;
+  position: relative;
   z-index: 12123123;
 }
 
@@ -99,7 +100,7 @@ header .header-content-name li.career {
 
 header .header-content .btn-toggle {
   display: none;
-  z-index: 234234234234234;
+  z-index: 50000;
   position: absolute;
   right: 1rem;
   top: 2.8rem;
@@ -519,32 +520,35 @@ section.section-3 .project-container .project-wrapper video, section.section-3 .
 section.section-3 .project-container .project-wrapper video {
   display: none;
   position: absolute;
+  z-index: 40;
+  margin: 0 auto;
   top: 0;
   left: 0;
 }
 
-section.section-3 .project-container .project-wrapper video, section.section-3 .project-container .project-wrapper img {
+section.section-3 .project-container .project-wrapper video {
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
 }
 
-section.section-3 .project-container .project-wrapper video:hover, section.section-3 .project-container .project-wrapper img:hover {
-  -webkit-transform: scale(1.6);
-          transform: scale(1.6);
-  -webkit-box-shadow: rgba(138, 131, 124, 0.23) -11.31px 11.31px 25px 0px;
-          box-shadow: rgba(138, 131, 124, 0.23) -11.31px 11.31px 25px 0px;
-  cursor: none;
+section.section-3 .project-container .project-wrapper video:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
 }
 
-@media screen and (hover: none) {
-  section.section-3 .project-container .project-wrapper video:hover, section.section-3 .project-container .project-wrapper img:hover {
-    -webkit-transform: scale(1);
-            transform: scale(1);
+@media screen and (min-width: 1000px) {
+  section.section-3 .project-container .project-wrapper video:hover {
+    -webkit-transform: scale(1.5);
+            transform: scale(1.5);
+    -webkit-box-shadow: rgba(138, 131, 124, 0.23) -11.31px 11.31px 25px 0px;
+            box-shadow: rgba(138, 131, 124, 0.23) -11.31px 11.31px 25px 0px;
+    cursor: none;
   }
 }
 
 section.section-3 .project-container .project-wrapper .hover-video {
   position: relative;
+  z-index: 6;
 }
 
 section.section-3 .project-container .project-wrapper .hover-video:hover video {

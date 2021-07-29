@@ -15,10 +15,10 @@ header {
   height: $nav-height-desktop;
   background-color: white;
   width: 100%;
-  //position: sticky;
-  //top:0;
+  position: relative;
   z-index: 12123123;
   .header-content {
+    
     height: inherit;
     width: inherit;
     padding: 4px 5%;
@@ -71,7 +71,7 @@ header {
     }
     .btn-toggle {
       display: none;
-      z-index: 234234234234234;
+      z-index: 50000;
       position: absolute;
       right: 1rem;
       top: 2.8rem;
@@ -367,31 +367,37 @@ section.section-3 {
       video{
         display:none;
         position: absolute;
+       
+        z-index: 40;
+        margin:0 auto;
         top:0;
         left:0;
+        
       }
-      video,img {
+      video {
         transition: all 0.2s;
-        &:hover {
-          transform: scale(1.6);
-          box-shadow: rgba(138, 131, 124, 0.23) -11.31px 11.31px 25px 0px;
-          cursor: none;
-        }
-        @media screen and (hover: none) {
+        
+        
           &:hover {
-            transform: scale(1);
+            transform: scale(1.2);
           }
-        }
+          @media screen and (min-width:1000px) {
+            &:hover {
+              transform: scale(1.5);
+              box-shadow: rgba(138, 131, 124, 0.23) -11.31px 11.31px 25px 0px;
+              cursor: none;
+            }
+          }
+        
       }
       .hover-video{
         position: relative;
+        z-index: 6;
         &:hover{
           video{
             display:block;
           }
-          // img{
-          //   display:none;
-          // }
+          
         }
       }
     }
